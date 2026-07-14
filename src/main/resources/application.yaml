@@ -1,0 +1,32 @@
+# cau hinh properties
+#spring.application.name=identity-service
+
+#  # 1. Thông tin kết nối vào Database bằng tài khoản mặc định
+#spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+#spring.datasource.username=postgres
+#spring.datasource.password=123456
+#
+#  # 2. Cấu hình Hibernate (Công cụ tự động map Java Class thành Bảng SQL)
+#  # Lệnh 'update' giúp tự động tạo bảng mới hoặc cập nhật cột nếu bạn sửa code
+#spring.jpa.hibernate.ddl-auto=update
+#
+#  # Khai báo phương ngữ chuẩn cho PostgreSQL
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+#
+#  # Bật tính năng in câu lệnh SQL ra console để dễ debug lúc code
+#spring.jpa.show-sql=true
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/identity-service
+    username: postgres
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
