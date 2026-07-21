@@ -1,5 +1,8 @@
 package com.example.identity_service.dto.request;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiResponse <T>{
     // chua tat ca field mong muon
     private int code = 100;
